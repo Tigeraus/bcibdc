@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>词汇认知程度测试</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+	<script src='/javascripts/vue.min.js'></script>
+	<script src="/javascripts/test.js"></script>
+  </head>
+  <body onload='init()'>
+	  <div id='vm'>
+		  <h1 id='word'>
+			  {{ word }}
+		  </h1>
+		  <p>
+		  	<button type='button' onclick='test(5)'>记得很清楚</button>
+			<button type='button' onclick='test(4)'>需要想一下</button>
+			<button type='button' onclick='test(3)'>需要仔细想一下</button>
+		  	<button type='button' onclick='test(2)'>需要提示</button>
+		  	<button type='button' onclick='test(1)'>有印象</button>
+			<button type='button' onclick='test(0)'>完全不认识</button>
+		  </p>
+		  <p id='score'>
+	  		score:{{ score }}
+		  </p>
+	  </div>
+  </body>
+</html>
