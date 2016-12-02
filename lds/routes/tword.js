@@ -13,7 +13,7 @@ module.exports.getWordsFromRDS =  function getWordsFromRDS(user,callback) {
 		len:30
 	};
 	var options = {
-		hostname: 'localhost',
+		hostname: 'hopeful.uicp.cn',
 		port: '3001',
 		path: '/gettestwords',
 		method: 'POST',
