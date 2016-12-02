@@ -7,19 +7,19 @@
 	<script src="/javascripts/test.js"></script>
   </head>
   <body onload='init()'>
-	  <div id='vm'>
-		  <h1 id='word'>
+	  <div id='vm' style='top;50%'>
+		  <div id='word' align='center' style='font-size:100pt;margin:80pt;'>
 			  {{ word }}
-		  </h1>
-		  <p>
-		  	<button type='button' onclick='test(5)'>记得很清楚</button>
-			<button type='button' onclick='test(4)'>需要想一下</button>
-			<button type='button' onclick='test(3)'>需要仔细想一下</button>
-		  	<button type='button' onclick='test(2)'>需要提示</button>
-		  	<button type='button' onclick='test(1)'>有印象</button>
-			<button type='button' onclick='test(0)'>完全不认识</button>
+		  </div>
+		  <p align='center' style='margin:20pt;'>
+		  	<button class='btn' type='button' onclick='test(5)'>记得很清楚</button>
+			<button class='btn' type='button' onclick='test(4)'>需要想一下</button>
+			<button class='btn' type='button' onclick='test(3)'>需要仔细想一下</button>
+		  	<button class='btn' type='button' onclick='test(2)'>需要提示</button>
+		  	<button class='btn' type='button' onclick='test(1)'>有印象</button>
+			<button class='btn' type='button' onclick='test(0)'>完全不认识</button>
 		  </p>
-		  <p id='score'>
+		  <p id='score' style='display:none;'>
 	  		score:{{ score }}
 		  </p>
 	  </div>

@@ -2,6 +2,7 @@ var vm;
 var word;
 var count;
 var onload;
+var timer;
 
 function init() {
 	vm = new Vue({
@@ -23,6 +24,12 @@ function test(l) {
 	getWord(l);
 }
 
+function showbtn(show) {
+	var btns = document.getElementsByClassName('btn');
+	for(var i = 0; i < btns.length; i ++)
+		btns[i].style.display = show?'inline':'none';
+}
+
 function getWord(level) {
 	var xhr = function(){
 		if (window.XMLHttpRequest) {
@@ -37,6 +44,15 @@ function getWord(level) {
 				if(xhr.responseText[0] == '{') {
 					word = JSON.parse(xhr.responseText);
 					vm.word = word.word;
+					timer = 200;
+					showbtn(false);
+					var interval = setInterval(function() {
+						timer --;
+						if(timer <= 0) {
+							showbtn(true);
+							clearInterval(interval);
+						}
+					}, 10);
 				} else {
 					alert(xhr.responseText);
 					if(xhr.responseText == '测试完成！')
